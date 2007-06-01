@@ -4,10 +4,11 @@
 Name: thinkfinger
 Summary: Driver for the SGS Thomson Microelectronics fingerprint reader found in most IBM/Lenovo ThinkPads
 Version: 0.3
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPL
-Group:   TODO
-Source: %{name}-%{version}.tar.bz2
+Group: System/Kernel and hardware
+Source: http://ovh.dl.sourceforge.net/sourceforge/thinkfinger/%{name}-%{version}.tar.bz2
+URL: http://thinkfinger.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: pam-devel
@@ -30,8 +31,10 @@ Summary:  %{summary}
 Group: %{group}
 
 %description -n %{lib_name}
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post -n %{lib_name}
+/sbin/ldconfig
+%postun -n %{lib_name}
+/sbin/ldconfig
 
 %files -n %{lib_name}
 %defattr(-,root,root)
@@ -72,4 +75,3 @@ make DESTDIR=%buildroot install
 
 %clean
 rm -rf %buildroot 
-
