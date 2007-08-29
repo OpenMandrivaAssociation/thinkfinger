@@ -21,8 +21,8 @@ fingerprint reader found in most IBM/Lenovo ThinkPads.
 %files
 %defattr(-,root,root)
 %{_sbindir}/tf-tool
-%_mandir/man1/tf-tool.1.bz2
-%_mandir/man8/pam_thinkfinger.8.bz2
+%_mandir/man1/tf-tool.*
+%_mandir/man8/pam_thinkfinger.*
 
 #--------------------------------------------------------------------
 
