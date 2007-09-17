@@ -13,6 +13,7 @@ URL: http://thinkfinger.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 BuildRequires: pam-devel
 BuildRequires: libusb-devel
+BuildRequires: doxygen
 
 %description
 ThinkFinger is a driver for the SGS Thomson Microelectronics 
