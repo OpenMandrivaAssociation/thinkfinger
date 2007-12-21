@@ -10,6 +10,7 @@ License: GPLv2+
 Group: System/Kernel and hardware
 Source: http://ovh.dl.sourceforge.net/sourceforge/thinkfinger/%{name}-%{version}.tar.bz2
 URL: http://thinkfinger.sourceforge.net/
+BuildRoot: %{_tmppath}/%{name}-%{version}-build
 BuildRequires: pam-devel
 BuildRequires: libusb-devel
 BuildRequires: doxygen
