@@ -5,12 +5,13 @@
 Name: thinkfinger
 Summary: Driver and tools for the fingerprint reader found in most IBM/Lenovo ThinkPads
 Version: 0.3
-Release: %mkrel 3
+Release: %mkrel 4
 License: GPLv2+
 Group: System/Kernel and hardware
 Source: http://ovh.dl.sourceforge.net/sourceforge/thinkfinger/%{name}-%{version}.tar.bz2
 URL: http://thinkfinger.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
+Requires: kmod(uinput)
 BuildRequires: pam-devel
 BuildRequires: libusb-devel
 BuildRequires: doxygen
@@ -50,8 +51,7 @@ This package contains the driver library.
 
 %files -n %{lib_name}
 %defattr(-,root,root)
-%{_libdir}/libthinkfinger.so.0.0.0
-%{_libdir}/libthinkfinger.so.0
+%{_libdir}/libthinkfinger.so.%{lib_major}*
 
 #--------------------------------------------------------------------
 
