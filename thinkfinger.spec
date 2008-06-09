@@ -44,10 +44,8 @@ fingerprint reader found in most IBM/Lenovo ThinkPads.
 
 This package contains the driver library.
 
-%post -n %{lib_name}
-/sbin/ldconfig
-%postun -n %{lib_name}
-/sbin/ldconfig
+%post -n %{lib_name} -p /sbin/ldconfig
+%postun -n %{lib_name} -p /sbin/ldconfig
 
 %files -n %{lib_name}
 %defattr(-,root,root)
