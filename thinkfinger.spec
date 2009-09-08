@@ -5,7 +5,7 @@
 Name: thinkfinger
 Summary: Driver and tools for the fingerprint reader found in most IBM/Lenovo ThinkPads
 Version: 0.3
-Release: %mkrel 5
+Release: %mkrel 6
 License: GPLv2+
 Group: System/Kernel and hardware
 Source: http://ovh.dl.sourceforge.net/sourceforge/thinkfinger/%{name}-%{version}.tar.bz2
