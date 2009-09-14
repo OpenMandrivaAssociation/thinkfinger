@@ -5,10 +5,11 @@
 Name: thinkfinger
 Summary: Driver and tools for the fingerprint reader found in most IBM/Lenovo ThinkPads
 Version: 0.3
-Release: %mkrel 6
+Release: %mkrel 7
 License: GPLv2+
 Group: System/Kernel and hardware
 Source: http://ovh.dl.sourceforge.net/sourceforge/thinkfinger/%{name}-%{version}.tar.bz2
+Patch: thinkfinger-0.3-format-strings.patch
 URL: http://thinkfinger.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Requires: kmod(uinput)
@@ -85,6 +86,7 @@ thinkfinger.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 export CFLAGS="$RPM_OPT_FLAGS"
