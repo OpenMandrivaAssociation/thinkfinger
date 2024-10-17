@@ -10,7 +10,7 @@ License: GPLv2+
 Group: System/Kernel and hardware
 Source: http://ovh.dl.sourceforge.net/sourceforge/thinkfinger/%{name}-%{version}.tar.bz2
 Patch: thinkfinger-0.3-format-strings.patch
-URL: http://thinkfinger.sourceforge.net/
+URL: https://thinkfinger.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Requires: kmod(uinput)
 BuildRequires: pam-devel
