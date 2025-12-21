@@ -13,6 +13,11 @@ Patch: thinkfinger-0.3-format-strings.patch
 URL: https://thinkfinger.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 Requires: kmod(uinput)
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pam-devel
 BuildRequires: libusb-devel
 BuildRequires: doxygen
